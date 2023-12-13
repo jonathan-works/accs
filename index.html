@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CARs SEMA / Calculadora de amostra</title>
+        <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./src/css/preloader.css">
+    </head>
+    <body>
+        <div class="header">
+            <header class="no-print"></header>
+            <div class="header-logo">
+                <div>
+                    <div>
+                        <img src="./public/logo-cge.png" alt="Logo-CGE-MT" >
+                    </div>
+                </div>
+            </div>
+            <div class="header-titulo">
+                <div>
+                    <div>
+                        <h1>Avaliação de conformidade dos CARs validados pela SEMA</h1>
+                        <h2>Calculadora amostral</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient no-print"></div>
+        </div>
+        <main>
+            <div>
+                <div>
+                    <form id="form">
+                        <div class="mb-15">
+                            <label for="total-validado">Total de Cards Validos:</label>
+                            <input type="number" id="total-validado" name="total-validado" required>
+                        </div>
+                        <div class="mb-15">
+                            <label for="total-conferido">Total de Cards a Serem Conferidos:</label>
+                            <input type="number" id="total-conferido" name="total-conferido" required>
+                        </div>
+                        <div class="align-end no-print">
+                            <button class="mr-5" type="submit">Calcular</button>
+                            <button flat type="reset">Limpar</button>
+                        </div>
+                    </form>
+                    <div id="resultado" style="display: none;">
+                        <div>
+                            <h3 style="font-size: 2em;">Resultado</h3>
+                        </div>
+                        <div style="display: flex;" class="mb-15">
+                            <div style="width: 50%;">
+                                <div style="font-size: 1.2em;">Proporção de CARs a serem analisados: <span class="resultado-valor" style="font-weight: bold;
+                                    color: var(--color-primary);"></span></div>
+                            </div>
+                            <div style="width: 50%; text-align: end;">
+                                <div style="font-size: 1.2em;">Número de amostras necessárias: <span class="amostras-valor" style="font-weight: bold;
+                                    color: var(--color-primary);"></span></div>
+                            </div>
+                        </div>
+                        <div id="lista" style="background-color: var(--color-gray); border-radius: var(--border-radius); padding: 20px;" class="mb-15">
+                            <div class="mb-15">
+                                <div style="font-size: 1.2em; color: var(--color-text-secondary);">Números das linhas da planilha contendo a relação dos CARs a serem conferidos:</div>
+                            </div>
+                            <div>
+                                <div id="saida" style="font-weight: bold;
+                                color: var(--color-primary);"></div>
+                            </div>
+                        </div>
+                        <div class="align-center no-print">
+                            <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="pre-loader">
+            <div>
+                 <div id="animation"></div>
+                 <div class="indeterminate-loading-container">
+                     <div class="progress-bar">
+                         <div class="progress-bar-value"></div>
+                     </div>
+                 </div>
+            </div>
+         </div>
+         <script type="module">
+             import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
+             
+             const animation = lottieWeb.loadAnimation({
+                 container: document.getElementById('animation'),
+                 path: './assets/mato-grosso.json',
+                 renderer: 'svg',
+                 loop: false,
+                 autoplay: true,
+                 name: "Brasão do Mato Grosso",
+             });
+         </script>
+        <script src="./src/script.js"></script>
+    </body>
+</html>
