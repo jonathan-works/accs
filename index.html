@@ -46,25 +46,22 @@
                     </form>
                     <div id="resultado" style="display: none;">
                         <div>
-                            <h3 style="font-size: 2em;">Resultado</h3>
+                            <h3 class="font-mid">Resultado</h3>
                         </div>
-                        <div style="display: flex;" class="mb-15">
-                            <div style="width: 50%;">
-                                <div style="font-size: 1.2em;">Proporção de CARs a serem analisados: <span class="resultado-valor" style="font-weight: bold;
-                                    color: var(--color-primary);"></span></div>
+                        <div class="flex mb-15">
+                            <div class="col-6">
+                                <div class="font-small">Proporção de CARs a serem analisados: <span class="resultado-valor text-bold text-primary"></span></div>
                             </div>
-                            <div style="width: 50%; text-align: end;">
-                                <div style="font-size: 1.2em;">Número de amostras necessárias: <span class="amostras-valor" style="font-weight: bold;
-                                    color: var(--color-primary);"></span></div>
+                            <div class="col-6 align-end">
+                                <div class="font-small">Número de amostras necessárias: <span class="amostras-valor text-bold text-primary"></span></div>
                             </div>
                         </div>
-                        <div id="lista" style="background-color: var(--color-gray); border-radius: var(--border-radius); padding: 20px;" class="mb-15">
+                        <div id="lista"class="mb-15 p-20 bg-gray border-radius p-none-print">
                             <div class="mb-15">
-                                <div style="font-size: 1.2em; color: var(--color-text-secondary);">Números das linhas da planilha contendo a relação dos CARs a serem conferidos:</div>
+                                <div class="font-small text-secondary">Números das linhas da planilha contendo a relação dos CARs a serem conferidos:</div>
                             </div>
                             <div>
-                                <div id="saida" style="font-weight: bold;
-                                color: var(--color-primary);"></div>
+                                <div id="saida" class="text-bold text-primary"></div>
                             </div>
                         </div>
                         <div class="align-center no-print">
