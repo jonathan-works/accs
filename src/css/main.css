@@ -5,7 +5,7 @@
     --spacing-tight: 12px;
     --border-radius: 10px;
     --spacing-default: 16px;
-    --max-container: 900px;
+    --max-container: 1000px;
     --max-container-logo: 1130px;
     --spacing-extra-large: 24px;
 
@@ -210,6 +210,10 @@ button[flat]{
 
 .col-6{
     width: 50%;
+}
+
+.col-4{
+    width: 33.33%;
 }
 
 .align-end{

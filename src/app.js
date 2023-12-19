@@ -28,8 +28,25 @@ function calcular(event) {
     var lista = lista.sort(function (a, b) {
         return a - b;
     });
+
     document.getElementById("saida").innerHTML = lista.join(", ");
+    document.getElementById("data-cricao").innerHTML = obterDataAtualFormatada();
+
     return false;
+}
+
+function obterDataAtualFormatada() {
+    const dataAtual = new Date();
+
+    const dia = String(dataAtual.getDate()).padStart(2, '0');
+    const mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+    const ano = dataAtual.getFullYear();
+    const horas = String(dataAtual.getHours()).padStart(2, '0');
+    const minutos = String(dataAtual.getMinutes()).padStart(2, '0');
+    const segundos = String(dataAtual.getSeconds()).padStart(2, '0');
+    const dataFormatada = `${dia}/${mes}/${ano}, às ${horas}:${minutos}:${segundos}`;
+
+    return "Criado em " + dataFormatada;
 }
 
 function limpar(){
